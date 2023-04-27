@@ -1,0 +1,14 @@
+#! /bin/sh
+
+o=~/$1/reading.html
+u=$2
+shift
+shift
+r=$@
+
+cat >> $o <<EOF
+
+<p>$r<br>
+<a href="$u" class="uri">$u</a></p>
+EOF
+

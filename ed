@@ -1,0 +1,5 @@
+#! /bin/sh
+
+# nvim `ls -tr | tail -n 1`
+nvim `ls | sort | tail -n 1`
+

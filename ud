@@ -1,0 +1,4 @@
+#! /bin/sh
+
+printf "# %s\n\n###\n" `date +%Y-%m-%d` > `date +%Y-%m-%d.md`
+
