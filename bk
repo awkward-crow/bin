@@ -1,5 +1,7 @@
 #! /bin/sh
 
+## see ~/b/nix/bookmark
+
 o=~/$1/reading.html
 u=$2
 shift
