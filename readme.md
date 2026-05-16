@@ -1,5 +1,16 @@
 # ~/bin
 
+## dwl
+
+Startup script `w`
+
+    #!/bin/sh
+    (while true; do
+        echo "  $(acpi -b | awk '{print $3" "$4}' | sed 's/,//g')  $(date +%-H.%M)  "
+        sleep 30
+    done) | ssh-agent dbus-run-session dwl -s "/home/crow/a/images/wight.sh 300 /home/crow/a/images/misc" "$@"
+
+See also, symlink for `dwl`.
 
 ## julia related
 
@@ -33,6 +44,10 @@
 e.g.
 
 ```sh
+ln -s ~/a/dwl/bin/dwl .
+ln -s ~/a/chapel/2.8.0/chapel-2.8.0/bin/linux64-x86_64/chpl .
+ln -s ~/a/chapel/2.8.0/chapel-2.8.0/bin/linux64-x86_64/chpl-language-server .
+ln -s ~/a/chapel/2.8.0/chapel-2.8.0/bin/linux64-x86_64/chpl-shim .
 ln -s ~/a/binprolog/binprolog/bin/bp .
 ln -s ~/a/icon/install/bin/icon .
 ln -s ~/a/icon/install/bin/iconx .
